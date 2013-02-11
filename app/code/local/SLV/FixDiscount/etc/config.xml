@@ -121,7 +121,7 @@
         </events>
         <rewrite>
             <coupon_post>
-                <from><![CDATA[#^/checkout/cart/(couponFix)#]]></from>
+                <from><![CDATA[#^/checkout/cart/(discountFix)#]]></from>
                 <to>/fix_discount/cart/{$1}</to>
             </coupon_post>
         </rewrite>

@@ -45,7 +45,7 @@ class SLV_FixDiscount_CartController extends Mage_Checkout_CartController
                 ->collectTotals()
                 ->save();
         } else {
-            $discountAmount = (float)$params['fixed_coupon_code'];
+            $discountAmount = (float)str_replace(',','',$params['fixed_coupon_code']);
             if ($discountAmount > 0) {
                 $this->_getSession()->addSuccess(
                     $this->__('Fixed discount amount was applied successfully. Discount amount is "%s"',
